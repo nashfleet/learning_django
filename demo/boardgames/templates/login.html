@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <title>Please login</title>
+  </head>
+  <body>
+    {% if form.errors %}
+      <p class="text-warning"> Username and password didn't match </p>
+    {% endif %}
+    <form role="form" class="form-horizontal" method="post">
+      {% csrf_token %}
+      {{ form }}
+      <input class="btn btn-primary" type="submit" value="Login" />
+      <input type="hidden" name="next" value="{{ next }}" />
+    </form>
+  </body>
+</html>
