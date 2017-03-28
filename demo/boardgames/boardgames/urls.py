@@ -4,6 +4,7 @@ from django.contrib import admin
 urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^userprofile/', include('userprofile.urls')),
+    url(r'^interactive/', include('interactive.urls')),
     url(r'^$', 'main.views.home', name='boardgames_home')
 )
 
