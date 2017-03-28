@@ -9,7 +9,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('interactive', '0002_game_status'),
+        ('tictactoe', '0002_game_status'),
     ]
 
     operations = [

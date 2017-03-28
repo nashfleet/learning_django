@@ -30,7 +30,7 @@ class Migration(migrations.Migration):
                 ('x', models.IntegerField()),
                 ('y', models.IntegerField()),
                 ('comment', models.CharField(max_length=300)),
-                ('game', models.ForeignKey(to='interactive.Game')),
+                ('game', models.ForeignKey(to='tictactoe.Game')),
             ],
         ),
     ]

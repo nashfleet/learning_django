@@ -8,7 +8,7 @@ from django.conf import settings
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('interactive', '0003_invitation'),
+        ('tictactoe', '0003_invitation'),
     ]
 
     operations = [
