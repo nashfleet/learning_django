@@ -39,10 +39,12 @@ INSTALLED_APPS = (
     'main',
     'tictactoe',
     'userprofile',
-    'crispy_forms'
+    'crispy_forms',
+    'debug_toolbar'
 )
 
 MIDDLEWARE_CLASSES = (
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -75,6 +77,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'boardgames.wsgi.application'
 
+INTERNAL_IPS = ('127.0.0.1')
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
@@ -111,3 +114,4 @@ LOGIN_URL = 'boardgames_login'
 LOGOUT_URL = 'boardgames_logout'
 LOGIN_REDIRECT_URL = 'userprofile_home'
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
+DEBUG = True
