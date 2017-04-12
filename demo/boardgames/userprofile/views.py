@@ -1,5 +1,8 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
+from django.views.generic import CreateView
+from django.contrib.auth.forms import UserCreationForm
+from django.core.urlresolvers import reverse_lazy
 
 from tictactoe.models import Game
 
@@ -16,3 +19,8 @@ def home(request):
              'finished_games': finished_games,
              'invitations': invitations}
   return render(request, "userprofile/home.html", context)
+
+class SignUpView(CreateView):
+    form_class = UserCreationForm
+    template_name = "user/signup.html"
+    success_url = reverse_lazy('userprofile_home')
